@@ -20,3 +20,12 @@ export function formatInstallments(value: number, parcelas = 10) {
 export function whatsappLink(message: string) {
   return `https://wa.me/556299999999?text=${encodeURIComponent(message)}`;
 }
+
+export function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
