@@ -3,8 +3,7 @@
 import { ScrollReveal } from "./scroll-reveal";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Gift } from "lucide-react";
 
 export function PromoBanner() {
   return (
@@ -40,25 +39,32 @@ export function PromoBanner() {
 
             <ScrollReveal direction="right" delay={0.2}>
               <div className="flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-64 h-64 md:w-72 md:h-72 rounded-2xl bg-turquoise/10 border border-turquoise/20 flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="/logo.jpg"
-                      alt="Luxe Joias"
-                      width={180}
-                      height={180}
-                      className="rounded-full opacity-80"
-                    />
-                  </div>
-                  {/* Gift ribbon */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-full h-[2px] bg-gold/20" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="h-full w-[2px] bg-gold/20" />
-                  </div>
+                {/* Gift box illustration - turquoise box with gold ribbon */}
+                <div className="relative w-64 h-64 md:w-72 md:h-72">
+                  {/* Box body */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-52 h-40 md:w-60 md:h-44 rounded-xl bg-turquoise/15 border border-turquoise/30 shadow-[0_0_40px_rgba(59,191,176,0.08)]" />
+                  {/* Box lid */}
+                  <div className="absolute bottom-36 md:bottom-40 left-1/2 -translate-x-1/2 w-56 h-10 md:w-64 md:h-12 rounded-lg bg-turquoise/20 border border-turquoise/30" />
+                  {/* Vertical ribbon */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-48 md:h-52 bg-gold/15 border-x border-gold/25" />
+                  {/* Horizontal ribbon */}
+                  <div className="absolute bottom-[4.5rem] md:bottom-20 left-1/2 -translate-x-1/2 w-52 md:w-60 h-6 bg-gold/15 border-y border-gold/25" />
                   {/* Bow */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-gold/20 border border-gold/30" />
+                  <div className="absolute bottom-44 md:bottom-48 left-1/2 -translate-x-1/2">
+                    <div className="relative">
+                      <div className="absolute -left-8 -top-3 w-10 h-8 rounded-full bg-gold/20 border border-gold/30 rotate-[-20deg]" />
+                      <div className="absolute -right-8 -top-3 w-10 h-8 rounded-full bg-gold/20 border border-gold/30 rotate-[20deg]" />
+                      <div className="relative w-5 h-5 rounded-full bg-gold/30 border border-gold/40 z-10" />
+                    </div>
+                  </div>
+                  {/* Gift icon inside box */}
+                  <div className="absolute bottom-14 md:bottom-16 left-1/2 -translate-x-1/2">
+                    <Gift className="w-10 h-10 text-turquoise/40" />
+                  </div>
+                  {/* Sparkle accents */}
+                  <div className="absolute top-8 right-8 w-2 h-2 bg-gold/40 rounded-full animate-pulse" />
+                  <div className="absolute top-16 right-4 w-1.5 h-1.5 bg-turquoise/40 rounded-full animate-pulse delay-500" />
+                  <div className="absolute top-4 right-16 w-1 h-1 bg-gold/30 rounded-full animate-pulse delay-1000" />
                 </div>
               </div>
             </ScrollReveal>
