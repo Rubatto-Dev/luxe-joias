@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Product } from "@/types/product";
 import { formatCurrency } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import { ProductImage } from "./product-image";
+import { Eye } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -20,37 +20,63 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.4, 0.25, 1] }}
     >
       <Link href={`/produtos/${product.slug}`} className="group block">
-        <div className="relative overflow-hidden rounded-lg bg-[#1e1e1e] aspect-square border border-transparent group-hover:border-gold/30 transition-all duration-300">
+        <div className="relative overflow-hidden rounded-xl bg-[#141414] aspect-square border border-transparent group-hover:border-gold/20 transition-all duration-500">
           <ProductImage
             src={product.imagem}
             alt={product.nome}
-            className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full group-hover:scale-110 transition-transform duration-700 ease-out"
           />
+
+          {/* Overlay on hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+          {/* Quick view button */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-xs tracking-wider uppercase px-5 py-2.5 rounded-full border border-white/20">
+              <Eye className="w-3.5 h-3.5" />
+              Ver detalhes
+            </span>
+          </div>
+
+          {/* Discount badge */}
           {hasDiscount && (
-            <Badge className="absolute top-3 right-3 bg-gold text-bg text-xs font-semibold">
+            <div className="absolute top-3 right-3 bg-gold text-bg text-[10px] font-bold tracking-wider px-2.5 py-1 rounded-full">
               -{discountPercent}%
-            </Badge>
+            </div>
           )}
-        </div>
-        <div className="mt-3 space-y-1">
-          <Badge variant="outline" className="text-gold border-gold/30 text-[10px] tracking-widest px-2 py-0">
+
+          {/* Prata 925 tag */}
+          <div className="absolute top-3 left-3 text-gold/50 text-[9px] tracking-[0.2em] uppercase">
             PRATA 925
-          </Badge>
-          <h3 className="text-silver text-sm font-medium group-hover:text-gold transition-colors">
+          </div>
+        </div>
+
+        <div className="mt-4 space-y-1.5">
+          <h3 className="text-silver text-sm font-medium group-hover:text-gold transition-colors duration-300">
             {product.nome}
           </h3>
-          <div className="flex items-center gap-2">
-            <span className="text-silver font-semibold">{formatCurrency(product.preco)}</span>
+          <div className="flex items-baseline gap-2">
+            <span className="text-silver font-semibold text-base">
+              {formatCurrency(product.preco)}
+            </span>
             {hasDiscount && (
-              <span className="text-muted-custom text-sm line-through">{formatCurrency(product.preco_original!)}</span>
+              <span className="text-muted-custom text-xs line-through">
+                {formatCurrency(product.preco_original!)}
+              </span>
             )}
           </div>
-          {product.frete_gratis && <p className="text-turquoise text-xs">Frete gratis</p>}
+          <p className="text-muted-custom text-xs">
+            10x de {formatCurrency(product.preco / 10)} sem juros
+          </p>
+          {product.frete_gratis && (
+            <p className="text-turquoise text-xs font-medium">Frete gratis</p>
+          )}
         </div>
       </Link>
     </motion.div>
