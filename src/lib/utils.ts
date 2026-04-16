@@ -18,7 +18,7 @@ export function formatInstallments(value: number, parcelas = 10) {
 }
 
 export function whatsappLink(message: string) {
-  return `https://wa.me/556299999999?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/5562982171886?text=${encodeURIComponent(message)}`;
 }
 
 export function slugify(text: string) {

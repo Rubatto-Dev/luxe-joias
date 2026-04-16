@@ -81,7 +81,7 @@ export function Hero() {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/556299999999?text=Ola! Vi o site e quero saber mais sobre as joias da Luxe Joias."
+                href="https://wa.me/5562982171886?text=Ola! Vi o site e quero saber mais sobre as joias da Luxe Joias."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-silver/60 hover:text-whatsapp text-sm font-medium transition-colors duration-300 border-b border-transparent hover:border-whatsapp pb-0.5"
