@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Instagram, Heart, Shield } from "lucide-react";
+import { MapPin, Camera, Heart, Shield } from "lucide-react";
 
 export default function SobrePage() {
   return (
@@ -65,7 +65,7 @@ export default function SobrePage() {
         </div>
 
         <div className="text-center bg-bg-card rounded-xl border border-border-subtle p-8">
-          <Instagram className="w-8 h-8 text-gold mx-auto mb-4" />
+          <Camera className="w-8 h-8 text-gold mx-auto mb-4" />
           <h3 className="text-silver text-lg mb-2">Siga-nos no Instagram</h3>
           <p className="text-muted-custom mb-4">Acompanhe novidades, lancamentos e promocoes exclusivas.</p>
           <a href="https://instagram.com/luxejoias._" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
