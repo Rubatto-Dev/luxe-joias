@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { getProductBySlug } from "@/lib/products";
 import { useCart } from "@/context/cart-context";
@@ -13,14 +13,23 @@ import { QuantityInput } from "@/components/quantity-input";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Truck, Shield, Clock } from "lucide-react";
 import { ProductImage } from "@/components/product-image";
+import { Product } from "@/types/product";
 import Link from "next/link";
 
 export default function ProductPage() {
   const params = useParams();
-  const product = getProductBySlug(params.slug as string);
+  const [product, setProduct] = useState<Product | null>(null);
+  const [mounted, setMounted] = useState(false);
   const { addItem } = useCart();
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
   const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    setMounted(true);
+    setProduct(getProductBySlug(params.slug as string));
+  }, [params.slug]);
+
+  if (!mounted) return null;
 
   if (!product) {
     return (

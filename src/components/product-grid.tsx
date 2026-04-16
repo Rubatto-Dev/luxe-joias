@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getProductsByCategory } from "@/lib/products";
 import { ProductCard } from "./product-card";
 import { CategoryFilter } from "./category-filter";
+import { Product } from "@/types/product";
 
 interface ProductGridProps {
   showFilter?: boolean;
@@ -17,7 +18,20 @@ export function ProductGrid({
   initialCategory = "todos",
 }: ProductGridProps) {
   const [category, setCategory] = useState(initialCategory);
-  const products = getProductsByCategory(category);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      setProducts(getProductsByCategory(category));
+    }
+  }, [category, mounted]);
+
+  if (!mounted) return null;
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
