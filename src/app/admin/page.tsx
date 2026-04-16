@@ -125,6 +125,7 @@ export default function AdminPage() {
     setEditingId(product.id);
     setForm(productToForm(product));
     setShowForm(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function handleNew() {
