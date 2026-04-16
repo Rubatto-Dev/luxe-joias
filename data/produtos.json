@@ -10,7 +10,7 @@
     "frete_gratis": true,
     "tamanhos": [12,13,14,15,16,17,18,19,20,21,22],
     "descricao": "Alianca em prata 925 com microzirconias cravejadas. Acabamento polido de alta durabilidade.",
-    "imagem": "https://images.unsplash.com/photo-1515562141589-67f0d569b6f3?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "frete_gratis": true,
     "tamanhos": [12,14,16,18,20,22],
     "descricao": "Par de aliancas em prata 925 com pedra ametista central. Vendido como par.",
-    "imagem": "https://images.unsplash.com/photo-1600721391689-2564bb8055de?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "frete_gratis": true,
     "tamanhos": null,
     "descricao": "Corrente veneziana em prata 925, comprimento 60cm, espessura 3mm. Ideal para uso diario.",
-    "imagem": "https://images.unsplash.com/photo-1688633685712-b34e145e41cd?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "frete_gratis": true,
     "tamanhos": [14,15,16,17,18,19,20],
     "descricao": "Anel solitario em prata 925 com pedra de topazio azul sky. Delicado e elegante.",
-    "imagem": "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
     "frete_gratis": true,
     "tamanhos": [16,17,18,19,20,21,22,23,24],
     "descricao": "Alianca duo em prata 925 com acabamento fosco e polido. Design moderno e robusto.",
-    "imagem": "https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
     "frete_gratis": true,
     "tamanhos": null,
     "descricao": "Corrente grumet em prata 925, comprimento 70cm, espessura 4mm. Presenca e elegancia.",
-    "imagem": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 7,
@@ -88,7 +88,7 @@
     "frete_gratis": true,
     "tamanhos": [14,15,16,17,18,19,20],
     "descricao": "Anel em prata 925 com pedra ametista lilas. Elegante para uso diario ou ocasioes especiais.",
-    "imagem": "https://images.unsplash.com/photo-1691485350668-3a8bdc6b7e28?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   },
   {
     "id": 8,
@@ -101,6 +101,6 @@
     "frete_gratis": true,
     "tamanhos": [12,14,16,18,20,22,24],
     "descricao": "Par de aliancas em prata 925 com acabamento escovado. Classico e atemporal.",
-    "imagem": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=600&fit=crop&crop=center"
+    "imagem": ""
   }
 ]
