@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/context/cart-context";
 import { WhatsAppButton } from "./whatsapp-button";
+import { Logo } from "./logo";
 import { ShoppingBag, Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -22,9 +23,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-bg border-b border-border-subtle">
       <nav className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#2a1f0e] border-2 border-gold-dark flex items-center justify-center">
-            <span className="text-gold font-serif font-bold text-sm">LJ</span>
-          </div>
+          <Logo size={42} />
           <div className="hidden sm:block">
             <div className="text-silver text-sm tracking-[0.2em] font-medium">LUXE JOIAS</div>
             <div className="text-muted-custom text-[10px] tracking-[0.15em]">PRATAS 925</div>

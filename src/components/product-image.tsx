@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface ProductImageProps {
   src: string;
@@ -15,12 +16,16 @@ export function ProductImage({ src, alt, className = "" }: ProductImageProps) {
   if (!isExternal || error) {
     return (
       <div
-        className={`bg-[#1e1e1e] flex flex-col items-center justify-center gap-2 text-gold/40 ${className}`}
+        className={`bg-[#1e1e1e] flex flex-col items-center justify-center gap-3 ${className}`}
       >
-        <div className="w-16 h-16 rounded-full border-2 border-current flex items-center justify-center">
-          <span className="font-serif text-lg">LJ</span>
-        </div>
-        <span className="text-xs tracking-widest">PRATA 925</span>
+        <Image
+          src="/logo.jpg"
+          alt="Luxe Joias"
+          width={64}
+          height={64}
+          className="rounded-full opacity-40"
+        />
+        <span className="text-muted-custom text-xs tracking-widest">PRATA 925</span>
       </div>
     );
   }

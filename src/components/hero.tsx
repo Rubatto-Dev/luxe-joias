@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import { Shield, Truck, Users } from "lucide-react";
 
 export function Hero() {
@@ -64,17 +65,18 @@ export function Hero() {
         >
           <div className="relative w-full max-w-md aspect-square">
             <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-turquoise/5 rounded-2xl" />
-            <div className="absolute inset-4 bg-bg-card rounded-xl border border-border-subtle flex flex-col items-center justify-center gap-4">
-              <div className="w-32 h-24 bg-turquoise/20 rounded-lg border-2 border-turquoise/40 flex items-center justify-center">
-                <div className="w-20 h-3 bg-gold/60 rounded-full" />
+            <div className="absolute inset-4 bg-bg-card rounded-xl border border-border-subtle flex flex-col items-center justify-center gap-6">
+              <Image
+                src="/logo.jpg"
+                alt="Luxe Joias"
+                width={160}
+                height={160}
+                className="rounded-full"
+              />
+              <div className="text-center">
+                <div className="text-silver text-sm tracking-[0.25em] font-medium">LUXE JOIAS</div>
+                <div className="text-muted-custom text-xs tracking-[0.2em] mt-1">PRATAS 925 — GOIANIA</div>
               </div>
-              <div className="w-28 h-20 bg-turquoise/10 rounded-lg border border-turquoise/20 -mt-2 flex items-center justify-center">
-                <div className="flex gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gold/30 border border-gold/50" />
-                  <div className="w-8 h-8 rounded-full bg-gold/30 border border-gold/50" />
-                </div>
-              </div>
-              <span className="text-muted-custom text-xs tracking-widest mt-2">LUXE JOIAS</span>
             </div>
           </div>
         </motion.div>

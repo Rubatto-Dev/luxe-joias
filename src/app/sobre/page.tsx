@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Camera, Heart, Shield } from "lucide-react";
+import { Logo } from "@/components/logo";
 
 export default function SobrePage() {
   return (
@@ -13,8 +14,8 @@ export default function SobrePage() {
         className="space-y-12"
       >
         <div className="text-center">
-          <div className="w-20 h-20 rounded-full bg-[#2a1f0e] border-2 border-gold-dark flex items-center justify-center mx-auto mb-6">
-            <span className="text-gold font-serif font-bold text-2xl">LJ</span>
+          <div className="mx-auto mb-6 w-20">
+            <Logo size={80} />
           </div>
           <h1 className="text-3xl md:text-4xl text-silver font-light">
             Sobre a <span className="text-gold italic">Luxe Joias</span>

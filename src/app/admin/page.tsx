@@ -13,6 +13,7 @@ import { Product } from "@/types/product";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Logo } from "@/components/logo";
 import {
   Plus,
   Pencil,
@@ -180,8 +181,8 @@ export default function AdminPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="w-full max-w-sm p-8 bg-bg-card rounded-xl border border-border-subtle">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 rounded-full bg-[#2a1f0e] border-2 border-gold-dark flex items-center justify-center mx-auto mb-4">
-              <span className="text-gold font-serif font-bold text-xl">LJ</span>
+            <div className="mx-auto mb-4 w-16">
+              <Logo size={64} />
             </div>
             <h1 className="text-xl text-silver font-medium">Painel Administrativo</h1>
             <p className="text-muted-custom text-sm mt-1">Luxe Joias</p>
