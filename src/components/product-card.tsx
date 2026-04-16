@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Product } from "@/types/product";
 import { formatCurrency } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { ProductImage } from "./product-image";
 
 interface ProductCardProps {
   product: Product;
@@ -24,13 +25,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <Link href={`/produtos/${product.slug}`} className="group block">
-        <div className="relative overflow-hidden rounded-lg bg-[#1e1e1e] aspect-square flex items-center justify-center border border-transparent group-hover:border-gold/30 transition-all duration-300">
-          <div className="flex flex-col items-center gap-2 text-gold/40 group-hover:text-gold/60 transition-colors">
-            <div className="w-16 h-16 rounded-full border-2 border-current flex items-center justify-center">
-              <span className="font-serif text-lg">LJ</span>
-            </div>
-            <span className="text-xs tracking-widest">PRATA 925</span>
-          </div>
+        <div className="relative overflow-hidden rounded-lg bg-[#1e1e1e] aspect-square border border-transparent group-hover:border-gold/30 transition-all duration-300">
+          <ProductImage
+            src={product.imagem}
+            alt={product.nome}
+            className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+          />
           {hasDiscount && (
             <Badge className="absolute top-3 right-3 bg-gold text-bg text-xs font-semibold">
               -{discountPercent}%

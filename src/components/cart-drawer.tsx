@@ -33,9 +33,17 @@ export function CartDrawer() {
                   key={`${item.product.id}-${item.tamanho}`}
                   className="flex gap-3 p-3 bg-bg rounded-lg"
                 >
-                  <div className="w-16 h-16 bg-[#1e1e1e] rounded-md flex items-center justify-center text-gold text-xs font-serif shrink-0">
-                    LJ
-                  </div>
+                  {item.product.imagem?.startsWith("http") ? (
+                    <img
+                      src={item.product.imagem}
+                      alt={item.product.nome}
+                      className="w-16 h-16 rounded-md object-cover shrink-0"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 bg-[#1e1e1e] rounded-md flex items-center justify-center text-gold text-xs font-serif shrink-0">
+                      LJ
+                    </div>
+                  )}
                   <div className="flex-1 min-w-0">
                     <p className="text-silver text-sm font-medium truncate">
                       {item.product.nome}

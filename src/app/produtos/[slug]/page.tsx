@@ -12,6 +12,7 @@ import { SizeSelector } from "@/components/size-selector";
 import { QuantityInput } from "@/components/quantity-input";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Truck, Shield, Clock } from "lucide-react";
+import { ProductImage } from "@/components/product-image";
 import Link from "next/link";
 
 export default function ProductPage() {
@@ -47,11 +48,12 @@ export default function ProductPage() {
           transition={{ duration: 0.5 }}
           className="md:col-span-3"
         >
-          <div className="aspect-square bg-[#1e1e1e] rounded-xl flex flex-col items-center justify-center gap-4 border border-border-subtle">
-            <div className="w-24 h-24 rounded-full border-2 border-gold/40 flex items-center justify-center">
-              <span className="font-serif text-3xl text-gold/50">LJ</span>
-            </div>
-            <span className="text-muted-custom text-sm tracking-widest">{product.nome}</span>
+          <div className="aspect-square bg-[#1e1e1e] rounded-xl overflow-hidden border border-border-subtle">
+            <ProductImage
+              src={product.imagem}
+              alt={product.nome}
+              className="w-full h-full"
+            />
           </div>
         </motion.div>
 
