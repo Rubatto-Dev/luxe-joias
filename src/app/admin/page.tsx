@@ -24,6 +24,7 @@ import {
   X,
   Package,
   Eye,
+  Upload,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -350,14 +351,50 @@ export default function AdminPage() {
             </div>
             <div>
               <label className="text-sm text-muted-custom mb-1.5 block">
-                URL da imagem (opcional)
+                Foto do produto
               </label>
-              <Input
-                value={form.imagem}
-                onChange={(e) => setForm({ ...form, imagem: e.target.value })}
-                placeholder="https://... ou /produtos/foto.jpg"
-                className="bg-bg border-border-subtle text-silver"
-              />
+              <div className="space-y-3">
+                {form.imagem && (
+                  <div className="relative w-24 h-24 rounded-lg overflow-hidden border border-border-subtle">
+                    <img
+                      src={form.imagem}
+                      alt="Preview"
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setForm({ ...form, imagem: "" })}
+                      className="absolute top-1 right-1 w-5 h-5 bg-black/60 rounded-full flex items-center justify-center text-white hover:bg-black/80"
+                    >
+                      <X className="w-3 h-3" />
+                    </button>
+                  </div>
+                )}
+                <label className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg border border-dashed border-border-subtle hover:border-gold/30 bg-bg cursor-pointer transition-colors">
+                  <Upload className="w-4 h-4 text-muted-custom" />
+                  <span className="text-muted-custom text-sm">
+                    {form.imagem ? "Trocar foto" : "Enviar foto do celular"}
+                  </span>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (!file) return;
+                      if (file.size > 2 * 1024 * 1024) {
+                        alert("Imagem muito grande. Use uma foto de ate 2MB.");
+                        return;
+                      }
+                      const reader = new FileReader();
+                      reader.onload = () => {
+                        setForm({ ...form, imagem: reader.result as string });
+                      };
+                      reader.readAsDataURL(file);
+                    }}
+                  />
+                </label>
+              </div>
             </div>
             <div>
               <label className="text-sm text-muted-custom mb-1.5 block">
@@ -432,7 +469,7 @@ export default function AdminPage() {
             className="flex items-center gap-4 p-4 bg-bg-card rounded-lg border border-border-subtle hover:border-gold/20 transition-colors"
           >
             {/* Thumbnail */}
-            {product.imagem && product.imagem.startsWith("http") ? (
+            {product.imagem && (product.imagem.startsWith("http") || product.imagem.startsWith("data:")) ? (
               <img
                 src={product.imagem}
                 alt={product.nome}

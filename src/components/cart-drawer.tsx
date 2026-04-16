@@ -33,7 +33,7 @@ export function CartDrawer() {
                   key={`${item.product.id}-${item.tamanho}`}
                   className="flex gap-3 p-3 bg-bg rounded-lg"
                 >
-                  {item.product.imagem?.startsWith("http") ? (
+                  {item.product.imagem && (item.product.imagem.startsWith("http") || item.product.imagem.startsWith("data:")) ? (
                     <img
                       src={item.product.imagem}
                       alt={item.product.nome}

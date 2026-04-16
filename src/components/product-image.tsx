@@ -11,9 +11,9 @@ interface ProductImageProps {
 
 export function ProductImage({ src, alt, className = "" }: ProductImageProps) {
   const [error, setError] = useState(false);
-  const isExternal = src.startsWith("http");
+  const hasImage = src && (src.startsWith("http") || src.startsWith("data:"));
 
-  if (!isExternal || error) {
+  if (!hasImage || error) {
     return (
       <div
         className={`bg-[#1e1e1e] flex flex-col items-center justify-center gap-3 ${className}`}
