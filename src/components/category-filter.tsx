@@ -4,8 +4,8 @@ import { getCategories } from "@/lib/products";
 
 const categoryLabels: Record<string, string> = {
   todos: "Todos",
-  aliancas: "Aliancas",
-  aneis: "Aneis",
+  aliancas: "Alianças",
+  aneis: "Anéis",
   correntes: "Correntes masculinas",
   brincos: "Brincos",
   pingentes: "Pingentes",

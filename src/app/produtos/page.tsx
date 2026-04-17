@@ -11,8 +11,8 @@ function ProductsContent() {
   return (
     <div className="py-8">
       <div className="max-w-7xl mx-auto px-4 mb-4">
-        <h1 className="text-3xl text-silver font-light tracking-wide">Nosso catalogo</h1>
-        <p className="text-muted-custom mt-2">Aliancas, aneis e correntes em prata 925 com garantia.</p>
+        <h1 className="text-3xl text-silver font-light tracking-wide">Nosso catálogo</h1>
+        <p className="text-muted-custom mt-2">Alianças, anéis e correntes em prata 925 com garantia.</p>
       </div>
       <ProductGrid title="" initialCategory={categoria} />
     </div>

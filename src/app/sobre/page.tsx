@@ -21,7 +21,7 @@ export default function SobrePage() {
             Sobre a <span className="text-gold italic">Luxe Joias</span>
           </h1>
           <p className="text-muted-custom mt-4 text-lg max-w-2xl mx-auto leading-relaxed">
-            Somos uma loja especializada em pratas 925, com sede em Goiania, GO. Nossa missao e levar joias de qualidade com preco justo para todo o Brasil.
+            Somos uma loja especializada em pratas 925, com sede em Goiânia, GO. Nossa missão é levar joias de qualidade com preço justo para todo o Brasil.
           </p>
         </div>
 
@@ -44,17 +44,17 @@ export default function SobrePage() {
             {
               icon: Shield,
               title: "Qualidade garantida",
-              text: "Todas as nossas pecas sao em prata 925 legitima, com certificado de autenticidade e 12 meses de garantia.",
+              text: "Todas as nossas peças são em prata 925 legítima, com certificado de autenticidade e 12 meses de garantia.",
             },
             {
               icon: Heart,
               title: "Atendimento humanizado",
-              text: "Cada cliente e unico. Oferecemos atendimento personalizado pelo WhatsApp para ajudar na escolha perfeita.",
+              text: "Cada cliente é único. Oferecemos atendimento personalizado pelo WhatsApp para ajudar na escolha perfeita.",
             },
             {
               icon: MapPin,
-              title: "De Goiania para o Brasil",
-              text: "Sediados em Goiania, GO, entregamos para todo o Brasil com frete gratis acima de R$ 119,90.",
+              title: "De Goiânia para o Brasil",
+              text: "Sediados em Goiânia, GO, entregamos para todo o Brasil com frete grátis acima de R$ 119,90.",
             },
           ].map((item) => (
             <div key={item.title} className="p-6 bg-bg-card rounded-xl border border-border-subtle">
@@ -68,7 +68,7 @@ export default function SobrePage() {
         <div className="text-center bg-bg-card rounded-xl border border-border-subtle p-8">
           <Camera className="w-8 h-8 text-gold mx-auto mb-4" />
           <h3 className="text-silver text-lg mb-2">Siga-nos no Instagram</h3>
-          <p className="text-muted-custom mb-4">Acompanhe novidades, lancamentos e promocoes exclusivas.</p>
+          <p className="text-muted-custom mb-4">Acompanhe novidades, lançamentos e promoções exclusivas.</p>
           <a href="https://instagram.com/luxejoias._" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
             @luxejoias._
           </a>

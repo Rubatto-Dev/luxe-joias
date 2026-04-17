@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Logo } from "./logo";
 
 const categories = [
-  { href: "/produtos?categoria=aliancas", label: "Aliancas" },
-  { href: "/produtos?categoria=aneis", label: "Aneis" },
+  { href: "/produtos?categoria=aliancas", label: "Alianças" },
+  { href: "/produtos?categoria=aneis", label: "Anéis" },
   { href: "/produtos?categoria=correntes", label: "Correntes" },
   { href: "/produtos?categoria=brincos", label: "Brincos" },
 ];
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
 
         <div className="text-muted-custom text-sm text-center md:text-right">
-          <div>Goiania, GO</div>
+          <div>Goiânia, GO</div>
           <div>@luxejoias._ &middot; linktr.ee/luxejoias._</div>
         </div>
       </div>

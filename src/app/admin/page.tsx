@@ -435,7 +435,7 @@ export default function AdminPage() {
                 className="accent-gold"
               />
               <label htmlFor="frete" className="text-sm text-silver">
-                Frete gratis
+                Frete grátis
               </label>
             </div>
           </div>
@@ -505,7 +505,7 @@ export default function AdminPage() {
                   </span>
                 )}
                 {product.frete_gratis && (
-                  <span className="text-turquoise text-xs">Frete gratis</span>
+                  <span className="text-turquoise text-xs">Frete grátis</span>
                 )}
               </div>
             </div>

@@ -8,22 +8,22 @@ const trustItems = [
   {
     icon: Shield,
     title: "Prata 925 certificada",
-    description: "Certificado de autenticidade e 12 meses de garantia em todas as pecas.",
+    description: "Certificado de autenticidade e 12 meses de garantia em todas as peças.",
   },
   {
     icon: Truck,
-    title: "Frete gratis Brasil",
+    title: "Frete grátis Brasil",
     description: "Entrega gratuita para todo o Brasil em compras acima de R$ 119,90.",
   },
   {
     icon: MessageCircle,
     title: "Atendimento WhatsApp",
-    description: "Atendimento personalizado e rapido. Tire duvidas e compre com facilidade.",
+    description: "Atendimento personalizado e rápido. Tire dúvidas e compre com facilidade.",
   },
   {
     icon: Award,
     title: "Qualidade premium",
-    description: "Acabamento impecavel e materiais selecionados para durar a vida toda.",
+    description: "Acabamento impecável e materiais selecionados para durar a vida toda.",
   },
 ];
 

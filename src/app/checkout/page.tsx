@@ -15,7 +15,7 @@ export default function CheckoutPage() {
         <ShoppingBag className="w-16 h-16 text-muted-custom mx-auto mb-4" />
         <h1 className="text-2xl text-silver mb-2">Carrinho vazio</h1>
         <p className="text-muted-custom mb-6">Adicione produtos ao carrinho para continuar.</p>
-        <Link href="/produtos" className="text-gold hover:underline">Ver catalogo</Link>
+        <Link href="/produtos" className="text-gold hover:underline">Ver catálogo</Link>
       </div>
     );
   }

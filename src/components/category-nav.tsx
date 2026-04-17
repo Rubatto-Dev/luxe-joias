@@ -76,8 +76,8 @@ function EarringIcon({ className }: { className?: string }) {
 }
 
 const categories = [
-  { href: "/produtos?categoria=aliancas", label: "Aliancas", Icon: AllianceIcon },
-  { href: "/produtos?categoria=aneis", label: "Aneis", Icon: RingIcon },
+  { href: "/produtos?categoria=aliancas", label: "Alianças", Icon: AllianceIcon },
+  { href: "/produtos?categoria=aneis", label: "Anéis", Icon: RingIcon },
   { href: "/produtos?categoria=correntes", label: "Correntes", Icon: ChainIcon },
   { href: "/produtos?categoria=brincos", label: "Brincos", Icon: EarringIcon },
 ];

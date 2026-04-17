@@ -33,7 +33,7 @@ export function Hero() {
               variants={textReveal}
             >
               <span className="inline-block text-gold/70 text-xs tracking-[0.3em] uppercase border border-gold/20 px-4 py-1.5 rounded-full">
-                Lider em pratas 925 — Goiania
+                Líder em pratas 925 — Goiânia
               </span>
             </motion.div>
 
@@ -63,7 +63,7 @@ export function Hero() {
               variants={textReveal}
               className="text-muted-custom mt-8 text-lg leading-relaxed max-w-md"
             >
-              Aliancas, aneis e correntes em prata 925 com garantia.
+              Alianças, anéis e correntes em prata 925 com garantia.
               Entregamos para todo o Brasil.
             </motion.p>
 
@@ -76,7 +76,7 @@ export function Hero() {
             >
               <Link href="/produtos">
                 <Button className="bg-gold hover:bg-gold-dark text-bg font-semibold px-8 py-6 text-base rounded-full group transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,169,58,0.3)]">
-                  Ver catalogo
+                  Ver catálogo
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -100,7 +100,7 @@ export function Hero() {
             >
               {[
                 { icon: Shield, text: "Prata 925 garantida" },
-                { icon: Truck, text: "Frete gratis +R$119" },
+                { icon: Truck, text: "Frete grátis +R$119" },
                 { icon: Users, text: "13,8 mil seguidores" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2">
@@ -152,7 +152,7 @@ export function Hero() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-2 -left-6 bg-bg-card border border-turquoise/20 rounded-full px-4 py-2 shadow-lg"
               >
-                <span className="text-turquoise text-xs font-medium">Frete gratis</span>
+                <span className="text-turquoise text-xs font-medium">Frete grátis</span>
               </motion.div>
             </div>
           </motion.div>

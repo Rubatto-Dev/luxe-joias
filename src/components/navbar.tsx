@@ -8,8 +8,8 @@ import { Logo } from "./logo";
 import { ShoppingBag, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/produtos?categoria=aliancas", label: "Aliancas" },
-  { href: "/produtos?categoria=aneis", label: "Aneis" },
+  { href: "/produtos?categoria=aliancas", label: "Alianças" },
+  { href: "/produtos?categoria=aneis", label: "Anéis" },
   { href: "/produtos?categoria=correntes", label: "Correntes" },
   { href: "/produtos?categoria=brincos", label: "Brincos" },
   { href: "/sobre", label: "Sobre" },

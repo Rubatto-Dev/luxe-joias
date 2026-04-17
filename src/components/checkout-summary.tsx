@@ -31,7 +31,7 @@ export function CheckoutSummary() {
         <div className="flex justify-between text-sm">
           <span className="text-muted-custom">Frete</span>
           <span className={frete === 0 ? "text-turquoise" : "text-silver"}>
-            {frete === 0 ? "Gratis" : formatCurrency(frete)}
+            {frete === 0 ? "Grátis" : formatCurrency(frete)}
           </span>
         </div>
         <div className="flex justify-between text-lg font-semibold pt-2 border-t border-border-subtle">

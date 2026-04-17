@@ -73,14 +73,14 @@ export function PromoBanner() {
               </h2>
               <p className="text-muted-custom mt-5 leading-relaxed max-w-sm">
                 Cada peca e cuidadosamente embalada em nossa caixinha turquesa
-                com laco dourado. Perfeito para presentear quem voce ama.
+                com laço dourado. Perfeito para presentear quem você ama.
               </p>
               <Link href="/produtos" className="inline-block mt-8">
                 <Button
                   variant="outline"
                   className="border-gold/30 text-gold hover:bg-gold/10 rounded-full px-8 py-5 group"
                 >
-                  Explorar colecao
+                  Explorar coleção
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

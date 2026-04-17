@@ -20,10 +20,10 @@ export function CheckoutForm() {
       <Tabs defaultValue="credito" className="w-full">
         <TabsList className="w-full bg-bg border border-border-subtle">
           <TabsTrigger value="credito" className="flex-1 data-[state=active]:bg-gold/10 data-[state=active]:text-gold">
-            <CreditCard className="w-4 h-4 mr-2" />Credito
+            <CreditCard className="w-4 h-4 mr-2" />Crédito
           </TabsTrigger>
           <TabsTrigger value="debito" className="flex-1 data-[state=active]:bg-gold/10 data-[state=active]:text-gold">
-            <CreditCard className="w-4 h-4 mr-2" />Debito
+            <CreditCard className="w-4 h-4 mr-2" />Débito
           </TabsTrigger>
           <TabsTrigger value="pix" className="flex-1 data-[state=active]:bg-gold/10 data-[state=active]:text-gold">
             <QrCode className="w-4 h-4 mr-2" />Pix
@@ -32,12 +32,12 @@ export function CheckoutForm() {
 
         <TabsContent value="credito" className="space-y-4 mt-6">
           <div>
-            <label className="text-sm text-muted-custom mb-1.5 block">Numero do cartao</label>
+            <label className="text-sm text-muted-custom mb-1.5 block">Número do cartão</label>
             <Input placeholder="0000 0000 0000 0000" value={cardNumber} onChange={(e) => setCardNumber(formatCardNumber(e.target.value))} className="bg-bg border-border-subtle text-silver" />
           </div>
           <div>
-            <label className="text-sm text-muted-custom mb-1.5 block">Nome no cartao</label>
-            <Input placeholder="Como esta no cartao" className="bg-bg border-border-subtle text-silver" />
+            <label className="text-sm text-muted-custom mb-1.5 block">Nome no cartão</label>
+            <Input placeholder="Como está no cartão" className="bg-bg border-border-subtle text-silver" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -62,12 +62,12 @@ export function CheckoutForm() {
 
         <TabsContent value="debito" className="space-y-4 mt-6">
           <div>
-            <label className="text-sm text-muted-custom mb-1.5 block">Numero do cartao</label>
+            <label className="text-sm text-muted-custom mb-1.5 block">Número do cartão</label>
             <Input placeholder="0000 0000 0000 0000" className="bg-bg border-border-subtle text-silver" />
           </div>
           <div>
-            <label className="text-sm text-muted-custom mb-1.5 block">Nome no cartao</label>
-            <Input placeholder="Como esta no cartao" className="bg-bg border-border-subtle text-silver" />
+            <label className="text-sm text-muted-custom mb-1.5 block">Nome no cartão</label>
+            <Input placeholder="Como está no cartão" className="bg-bg border-border-subtle text-silver" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -98,7 +98,7 @@ export function CheckoutForm() {
                 <button onClick={() => navigator.clipboard.writeText("luxejoias@pix.com.br")} className="text-gold text-xs hover:underline">Copiar</button>
               </div>
             </div>
-            <p className="text-muted-custom text-sm">Apos o pagamento, confirme pelo WhatsApp</p>
+            <p className="text-muted-custom text-sm">Após o pagamento, confirme pelo WhatsApp</p>
           </div>
         </TabsContent>
       </Tabs>

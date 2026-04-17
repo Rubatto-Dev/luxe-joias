@@ -86,7 +86,7 @@ export function CartDrawer() {
                 <span className="text-gold font-semibold text-lg">{formatCurrency(totalPrice)}</span>
               </div>
               {totalPrice >= 119.9 && (
-                <p className="text-turquoise text-sm text-center">Frete gratis!</p>
+                <p className="text-turquoise text-sm text-center">Frete grátis!</p>
               )}
               <Link href="/checkout" onClick={() => setDrawerOpen(false)}>
                 <Button className="w-full bg-gold hover:bg-gold-dark text-bg font-semibold py-3">

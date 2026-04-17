@@ -34,8 +34,8 @@ export default function ProductPage() {
   if (!product) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-24 text-center">
-        <h1 className="text-2xl text-silver">Produto nao encontrado</h1>
-        <Link href="/produtos" className="text-gold mt-4 inline-block">Voltar ao catalogo</Link>
+        <h1 className="text-2xl text-silver">Produto não encontrado</h1>
+        <Link href="/produtos" className="text-gold mt-4 inline-block">Voltar ao catálogo</Link>
       </div>
     );
   }
@@ -87,7 +87,7 @@ export default function ProductPage() {
             <p className="text-muted-custom text-sm mt-1">{formatInstallments(product.preco)}</p>
             {product.frete_gratis && (
               <p className="text-turquoise text-sm mt-2 flex items-center gap-1.5">
-                <Truck className="w-4 h-4" />Frete gratis
+                <Truck className="w-4 h-4" />Frete grátis
               </p>
             )}
           </div>
@@ -119,7 +119,7 @@ export default function ProductPage() {
                 <Shield className="w-4 h-4 text-gold" />Material: {product.metal} | Garantia: 12 meses
               </p>
               <p className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-gold" />Entrega: 3-8 dias uteis
+                <Clock className="w-4 h-4 text-gold" />Entrega: 3-8 dias úteis
               </p>
             </div>
           </div>

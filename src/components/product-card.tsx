@@ -75,7 +75,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             10x de {formatCurrency(product.preco / 10)} sem juros
           </p>
           {product.frete_gratis && (
-            <p className="text-turquoise text-xs font-medium">Frete gratis</p>
+            <p className="text-turquoise text-xs font-medium">Frete grátis</p>
           )}
         </div>
       </Link>
